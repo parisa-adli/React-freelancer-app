@@ -1,11 +1,24 @@
 import { useState } from "react";
 import Textfield from "../../ui/Textfield";
+import { useMutation } from "@tanstack/react-query";
+import { getOtp } from "../../services/authService";
+import toast from "react-hot-toast";
 
-function SentOTPForm() {
+function SendOTPForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const sendOtpHandler = (e) => {
+  const { isPending, error, data, mutateAsync } = useMutation({
+    mutationFn: getOtp,
+  });
+
+  const sendOtpHandler = async (e) => {
     e.preventDefault();
+    try {
+      const data = await mutateAsync({ phoneNumber });
+      toast.success(data.message);
+    } catch (error) {
+      toast.error(error?.response?.data?.message);
+    }
   };
 
   return (
@@ -25,4 +38,4 @@ function SentOTPForm() {
   );
 }
 
-export default SentOTPForm;
+export default SendOTPForm;
