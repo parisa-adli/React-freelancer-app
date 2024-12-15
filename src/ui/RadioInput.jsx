@@ -1,4 +1,4 @@
-function RadioInput({label, name, id, value, onChange, checked }) {
+function RadioInput({ label, name, id, value, onChange, checked }) {
   return (
     <div className="flex items-center text-secondary-600 gap-x-2">
       <input
@@ -10,7 +10,7 @@ function RadioInput({label, name, id, value, onChange, checked }) {
         onChange={onChange}
         checked={checked}
       />
-          <label htmlFor="OWNER">{label}</label>
+      <label htmlFor={id}>{label}</label>
     </div>
   );
 }
