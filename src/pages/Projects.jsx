@@ -1,6 +1,10 @@
+import ProjectTable from "../projects/ProjectTable";
+
 function Projects() {
   return (
-    <div>Projects list</div>
-  )
+    <div>
+      <ProjectTable />
+    </div>
+  );
 }
-export default Projects
+export default Projects;
