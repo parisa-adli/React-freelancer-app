@@ -5,6 +5,7 @@ export default function useOwnerProjects() {
   const { data, isLoading } = useQuery({
     queryKey: ["projects"],
     queryFn: getOwnerProjectsApi,
+    retry: false,
   });
 
   const { projects } = data || {};
