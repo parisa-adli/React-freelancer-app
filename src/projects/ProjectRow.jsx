@@ -6,9 +6,11 @@ import { toPersianNumbersWithComma } from "../utils/toPersinNumber";
 import truncateText from "../utils/truncateText";
 import { PiPencilSimpleLineBold } from "react-icons/pi";
 import { PiTrashBold } from "react-icons/pi";
+import ConfirmDelete from "../ui/ConfirmDelete";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isDeleteOpen, setIsDeleteOpen] = useState(false);
 
   return (
     <Table.Row>
@@ -35,20 +37,36 @@ function ProjectRow({ project, index }) {
         )}
       </td>
       <td>
-        <div className="flex gap-x-4">
-          <button onClick={() => setIsEditOpen(true)}>
-            <PiPencilSimpleLineBold className="w-5 h-5 text-primary-900" />
-          </button>
-          <Modal
-            title="modal title"
-            open={isEditOpen}
-            onClose={() => setIsEditOpen(false)}
-          >
-            this is modal...
-          </Modal>
-          <button>
-            <PiTrashBold className="w-5 h-5 text-error" />
-          </button>
+        <div className="flex items-center gap-x-4">
+          <>
+            <button onClick={() => setIsEditOpen(true)}>
+              <PiPencilSimpleLineBold className="w-5 h-5 text-primary-900" />
+            </button>
+            <Modal
+              title={`ویرایش ${project.title}`}
+              open={isEditOpen}
+              onClose={() => setIsEditOpen(false)}
+            >
+              this is modal...
+            </Modal>
+          </>
+          <>
+            <button onClick={() => setIsDeleteOpen(true)}>
+              <PiTrashBold className="w-5 h-5 text-error" />
+            </button>
+            <Modal
+              title={`حذف ${project.title}`}
+              open={isDeleteOpen}
+              onClose={() => setIsDeleteOpen(false)}
+            >
+              <ConfirmDelete
+                recourseName={project.title}
+                onClose={() => setIsDeleteOpen(false)}
+                onConfirm={() => {}}
+                disabled={false}
+              />
+            </Modal>
+          </>
         </div>
       </td>
     </Table.Row>
