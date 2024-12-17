@@ -1,12 +1,12 @@
 import { useState } from "react";
-import Modal from "../ui/Modal";
-import Table from "../ui/Table";
-import toLocalDateShort from "../utils/toLocalDateShort";
-import { toPersianNumbersWithComma } from "../utils/toPersinNumber";
-import truncateText from "../utils/truncateText";
+import Modal from "../../ui/Modal";
+import Table from "../../ui/Table";
+import toLocalDateShort from "../../utils/toLocalDateShort";
+import truncateText from "../../utils/truncateText";
 import { PiPencilSimpleLineBold } from "react-icons/pi";
 import { PiTrashBold } from "react-icons/pi";
-import ConfirmDelete from "../ui/ConfirmDelete";
+import ConfirmDelete from "../../ui/ConfirmDelete";
+import { toPersianNumbersWithComma } from "../../utils/toPersianNumber";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
