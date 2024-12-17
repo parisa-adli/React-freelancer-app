@@ -1,13 +1,6 @@
 import Loading from "../ui/Loading";
 import Empty from "../ui/Empty";
-
 import useOwnerProjects from "./useOwnerProjects";
-import truncateText from "../utils/truncateText";
-import toLocalDateShort from "../utils/toLocalDateShort";
-import {
-  toPersianNumbers,
-  toPersianNumbersWithComma,
-} from "../utils/toPersinNumber";
 import Table from "../ui/Table";
 import ProjectRow from "./ProjectRow";
 
