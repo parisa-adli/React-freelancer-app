@@ -7,10 +7,12 @@ import { PiPencilSimpleLineBold } from "react-icons/pi";
 import { PiTrashBold } from "react-icons/pi";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { toPersianNumbersWithComma } from "../../utils/toPersianNumber";
+import useRemoveProject from "./useRemoveProjects";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
+  const { removeProject, isDeleting } = useRemoveProject();
 
   return (
     <Table.Row>
@@ -62,7 +64,11 @@ function ProjectRow({ project, index }) {
               <ConfirmDelete
                 recourseName={project.title}
                 onClose={() => setIsDeleteOpen(false)}
-                onConfirm={() => {}}
+                onConfirm={() =>
+                  removeProject(project._id, {
+                    onSuccess: () => setIsDeleteOpen(false),
+                  })
+                }
                 disabled={false}
               />
             </Modal>
