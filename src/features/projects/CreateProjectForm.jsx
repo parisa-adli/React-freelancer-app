@@ -8,8 +8,8 @@ function CreateProjectForm() {
     handleSubmit,
   } = useForm();
 
-    const onSubmit = (data) => console.log(data);
-    
+  const onSubmit = (data) => console.log(data);
+
   return (
     <form className="space-y-8" onSubmit={handleSubmit(onSubmit)}>
       <Textfield
@@ -21,7 +21,40 @@ function CreateProjectForm() {
           required: "عنوان ضروری است",
           minLength: {
             value: 10,
-            message: "طول عنوان باید بیشتر از 10 کاراکتر باشد",
+            message: "حداقل 10 کاراکتر را وارد کنید",
+          },
+        }}
+        errors={errors}
+      />
+      <Textfield
+        label="توضیحات"
+        name="description"
+        register={register}
+        required
+        validationSchema={{
+          required: "توضیحات ضروری است",
+          minLength: {
+            value: 15,
+            message: "حداقل 15 کاراکتر را وارد کنید",
+          },
+        }}
+        errors={errors}
+      />
+      <Textfield
+        label="بودجه"
+        name="budget"
+        type="number"
+        register={register}
+        required
+        validationSchema={{
+          required: "بودجه ضروری است",
+          min: {
+            value: 100000,
+            message: "مبلغ وارد شده نامعتبر است",
+          },
+          max: {
+            value: 1000000000,
+            message: "مبلغ وارد شده نامعتبر است",
           },
         }}
         errors={errors}
