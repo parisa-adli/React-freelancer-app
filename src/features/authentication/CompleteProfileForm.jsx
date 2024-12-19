@@ -7,6 +7,7 @@ import Loading from "../../ui/Loading";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import RadioInputGroup from "../../ui/RadioInputGroup";
 
 function CompleteProfileForm() {
   const {
@@ -62,35 +63,34 @@ function CompleteProfileForm() {
             required
             validationSchema={{
               required: "ایمیل ضروری است",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "ایمیل نامعتبر است",
+              },
             }}
             errors={errors}
           />
-          <div className="flex items-center justify-center gap-x-10">
-            <RadioInput
-              label="کارفرما"
-              name="role"
-              id="OWNER"
-              value="OWNER"
-              register={register}
-              checked={watch("role") === "OWNER"}
-              validationSchema={{
+          <RadioInputGroup
+            errors={errors}
+            register={register}
+            watch={watch}
+            configs={{
+              name: "role",
+              validationSchema: {
                 required: "انتخاب نقش ضروری است",
-              }}
-              errors={errors}
-            />
-            <RadioInput
-              label="فریلنسر"
-              name="role"
-              id="FREELANCER"
-              register={register}
-              onChange={(e) => setRole(e.target.value)}
-              checked={watch("role") === "FREELANCER"}
-              validationSchema={{
-                required: "انتخاب نقش ضروری است",
-              }}
-              errors={errors}
-            />
-          </div>
+              },
+              options: [
+                {
+                  value: "OWNER",
+                  label: "کارفرما",
+                },
+                {
+                  value: "FREELANCER",
+                  label: "فریلنسر",
+                },
+              ],
+            }}
+          />
           {isPending ? (
             <Loading />
           ) : (
