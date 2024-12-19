@@ -4,6 +4,7 @@ import RHFSelect from "../../ui/RHFSelect";
 import { TagsInput } from "react-tag-input-component";
 import { useState } from "react";
 import DatePickerField from "../../ui/DatePickerField";
+import useCategories from "../../hooks/useCategories";
 
 function CreateProjectForm() {
   const {
@@ -14,6 +15,7 @@ function CreateProjectForm() {
 
   const [tags, setTags] = useState([]);
   const [date, setDate] = useState(new Date());
+  const { categories  } = useCategories();
 
   const onSubmit = (data) => console.log(data);
 
@@ -71,7 +73,7 @@ function CreateProjectForm() {
         required
         name="category"
         register={register}
-        options={[]}
+        options={categories}
       />
       <div>
         <label htmlFor="tags" className="mb-2 block text-secondary-700">
