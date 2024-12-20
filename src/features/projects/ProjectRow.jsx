@@ -8,6 +8,7 @@ import { PiTrashBold } from "react-icons/pi";
 import ConfirmDelete from "../../ui/ConfirmDelete";
 import { toPersianNumbersWithComma } from "../../utils/toPersianNumber";
 import useRemoveProject from "./useRemoveProjects";
+import CreateProjectForm from "./CreateProjectForm";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -49,7 +50,10 @@ function ProjectRow({ project, index }) {
               open={isEditOpen}
               onClose={() => setIsEditOpen(false)}
             >
-              this is modal...
+              <CreateProjectForm
+                projectToEdit={project}
+                onClose={() => setIsEditOpen(false)}
+              />
             </Modal>
           </>
           <>
