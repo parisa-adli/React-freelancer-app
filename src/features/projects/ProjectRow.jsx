@@ -9,6 +9,7 @@ import ConfirmDelete from "../../ui/ConfirmDelete";
 import { toPersianNumbersWithComma } from "../../utils/toPersianNumber";
 import useRemoveProject from "./useRemoveProjects";
 import CreateProjectForm from "./CreateProjectForm";
+import ToggleProjectStatus from "./ToggleProjectStatus";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -33,11 +34,12 @@ function ProjectRow({ project, index }) {
       </td>
       <td>{project.freelancer?.name || "-"}</td>
       <td>
-        {project.status === "OPEN" ? (
+        <ToggleProjectStatus project={project} />
+        {/* {project.status === "OPEN" ? (
           <span className="badge badge--success">باز</span>
         ) : (
           <span className="badge badge--danger">بسته</span>
-        )}
+        )} */}
       </td>
       <td>
         <div className="flex items-center gap-x-4">
