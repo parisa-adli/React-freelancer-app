@@ -24,6 +24,7 @@ function ProjectTable() {
           <th>فریلنسر</th>
           <th>وضعیت</th>
           <th>عملیات</th>
+          <th>درخواست ها</th>
         </tr>
       </Table.Header>
       <Table.Body>

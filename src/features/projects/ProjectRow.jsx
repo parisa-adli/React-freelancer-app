@@ -10,6 +10,8 @@ import { toPersianNumbersWithComma } from "../../utils/toPersianNumber";
 import useRemoveProject from "./useRemoveProjects";
 import CreateProjectForm from "./CreateProjectForm";
 import ToggleProjectStatus from "./ToggleProjectStatus";
+import { HiEye } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function ProjectRow({ project, index }) {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -80,6 +82,11 @@ function ProjectRow({ project, index }) {
             </Modal>
           </>
         </div>
+      </td>
+      <td>
+        <Link to={project._id} className="flex justify-center">
+          <HiEye className="h-5 w-5 text-primary-800" />
+        </Link>
       </td>
     </Table.Row>
   );
