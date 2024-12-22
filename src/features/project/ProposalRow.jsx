@@ -47,6 +47,7 @@ function ProposalRow({ proposal, index }) {
         >
           <ChangeProposalStatus
             proposalId={proposal._id}
+            proposalStatus={proposal.status}
             onClose={() => setOpen(false)}
           />
         </Modal>

@@ -20,9 +20,11 @@ const options = [
   },
 ];
 
-function ChangeProposalStatus({ proposalId, onClose }) {
+function ChangeProposalStatus({ proposalId, onClose, proposalStatus }) {
   const { id: projectId } = useParams();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({
+    defaultValues: { status: proposalStatus },
+  });
   const { changeProposalStatuscode, isUpdating } = useChangeProposalStatus();
   const queryClient = useQueryClient();
 
