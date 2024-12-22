@@ -2,11 +2,12 @@ import { NavLink } from "react-router-dom";
 import { IoIosApps } from "react-icons/io";
 import { GoHomeFill } from "react-icons/go";
 
-function Sidebar() {
+function Sidebar({ children }) {
   return (
     <div className="bg-secondary-0 row-start-1 row-span-2 border-l border-secondary-200 p-4">
       <ul className="flex flex-col gap-y-4">
-        <li>
+        {children}
+        {/* <li>
           <CustomNavLink to="/owner/dashboard">
             <GoHomeFill />
             <span>داشبورد</span>
@@ -17,27 +18,11 @@ function Sidebar() {
             <IoIosApps />
             <span>پروژه ها</span>
           </CustomNavLink>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
 }
 export default Sidebar;
 
-function CustomNavLink({ children, to }) {
-  const navlinkClass =
-    "flex items-center gap-x-2 hover:bg-primary-100/80 hover:text-primary-900 px-2 py-1.5 rounded-lg  transition-all duration-300";
 
-  return (
-      <NavLink
-        to={to}
-        className={({ isActive }) =>
-          isActive
-            ? `${navlinkClass} bg-primary-100/80 text-primary-900`
-            : `${navlinkClass} text-secondary-600`
-        }
-      >
-        {children}
-      </NavLink>
-  );
-}
