@@ -3,8 +3,9 @@ import AppLayout from "../../ui/AppLayout";
 import CustomNavLink from "../../ui/CustomNavLink";
 import Sidebar from "../../ui/Sidebar";
 import { IoIosApps } from "react-icons/io";
+import { MdOutlinePostAdd } from "react-icons/md";
 
-function OwnerLayout() {
+function FreelancerLayout() {
   return (
     <AppLayout>
       <Sidebar>
@@ -17,8 +18,13 @@ function OwnerLayout() {
           <IoIosApps />
           <span>پروژه ها</span>
         </CustomNavLink>
+
+        <CustomNavLink to="proposals">
+          <MdOutlinePostAdd />
+          <span>درخواست ها</span>
+        </CustomNavLink>
       </Sidebar>
     </AppLayout>
   );
 }
-export default OwnerLayout;
+export default FreelancerLayout;
