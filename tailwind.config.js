@@ -17,6 +17,7 @@ export default {
   darkMode: ["class", '[class="dark-mode"]'],
   theme: {
     extend: {
+      screens: { 'xs': '440px' },
       colors: {
         primary: {
           900: withOpacity("--color-primary-900"),
