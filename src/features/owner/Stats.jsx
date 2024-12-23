@@ -1,5 +1,9 @@
-import { HiCollection, HiCurrencyDollar, HiOutlineViewGrid } from "react-icons/hi";
-import Stat from "./Stat";
+import {
+  HiCollection,
+  HiCurrencyDollar,
+  HiOutlineViewGrid,
+} from "react-icons/hi";
+import Stat from "../../ui/Stat";
 
 function Stats({ projects }) {
   const numOfProjects = projects.length;
@@ -11,8 +15,7 @@ function Stats({ projects }) {
     0
   );
 
-    //   console.log(projects.filter((project) => project.status === "OPEN").length);
-    
+  //   console.log(projects.filter((project) => project.status === "OPEN").length);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
