@@ -6,7 +6,7 @@ function FilterDropDown({ options, filterField }) {
   const filterValue = searchParams.get(filterField) || "";
 
   function handlerChange(e) {
-    searchParams.set(filterValue, e.target.value);
+    searchParams.set(filterField, e.target.value);
     setSearchParams(searchParams);
   }
   return (
