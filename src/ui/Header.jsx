@@ -6,8 +6,8 @@ import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
 function Header({ isShowSidebar, toggleSidebar }) {
-  console.log("header", isShowSidebar);
   const { isLoading } = useUser();
+  
   return (
     <div className="bg-secondary-0 md:row-auto py-4 md:px-8 border-b border-secondary-200">
       <div
