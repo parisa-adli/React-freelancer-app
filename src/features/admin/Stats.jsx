@@ -1,5 +1,4 @@
 import { HiCollection, HiCurrencyDollar, HiUser } from "react-icons/hi";
-import { FaUser } from "react-icons/fa6";
 
 import Stat from "../../ui/Stat";
 
