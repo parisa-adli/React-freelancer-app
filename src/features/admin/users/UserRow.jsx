@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "../../../ui/Modal";
 import { TbChecklist } from "react-icons/tb";
 import Table from "../../../ui/Table";
+import ChangeUserStatus from "./ChangeUserStatus";
 
 const statusStyle = [
   {
@@ -41,11 +42,11 @@ function UserRow({ user, index }) {
           open={open}
           onClose={() => setOpen(false)}
         >
-          {/* <ChangeProposalStatus
-          proposalId={proposal._id}
-          proposalStatus={proposal.status}
-          onClose={() => setOpen(false)}
-        /> */}
+          <ChangeUserStatus
+            userId={user._id}
+            userStatus={user.status}
+            onClose={() => setOpen(false)}
+          />
         </Modal>
         <button onClick={() => setOpen(true)}>
           <TbChecklist className="w-6 h-6 text-primary-800" />
