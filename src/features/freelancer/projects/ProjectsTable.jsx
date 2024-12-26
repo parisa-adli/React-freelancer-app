@@ -6,7 +6,7 @@ import ProjectRow from "./ProjectRow";
 
 function ProjectsTable() {
   const { isLoading, projects } = useProjects();
-  
+
   if (isLoading) return <Loading />;
   if (!projects.length) return <Empty resourceName="پروژه" />;
 
@@ -16,10 +16,9 @@ function ProjectsTable() {
         <tr className="title-row">
           <th>#</th>
           <th>عنوان پروژه</th>
-
+          <th>دسته بندی</th>
           <th>بودجه</th>
           <th>ددلاین</th>
-
           <th>وضعیت</th>
           <th>عملیات</th>
         </tr>

@@ -5,11 +5,11 @@ function NotFound() {
   const moveBack = useMoveBack();
 
   return (
-    <div className="h-screen bg-secondary-0">
+    <div className="h-screen bg-secondary-0 p-10">
       <div className="container xl:max-w-screen-xl">
         <div className="sm:max-w-sm flex justify-center">
           <div>
-            <h1 className="text-xl font-bold test-secondary-700 mb-8">
+            <h1 className="text-xl font-bold text-secondary-700 mb-8">
               صفحه ای که دنبالش بودید، پیدا نشد
             </h1>
             <button

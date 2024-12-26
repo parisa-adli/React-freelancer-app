@@ -21,11 +21,12 @@ const projectStatus = {
 function ProjectRow({ project, index }) {
   const { title, budget, deadline, status } = project;
   const [open, setOpen] = useState(false);
-
+  console.log(project);
   return (
     <Table.Row>
       <td>{index + 1}</td>
       <td>{truncateText(title, 30)}</td>
+      <td>{project.category.title}</td>
       <td>{toPersianNumbersWithComma(budget)}</td>
       <td>{toLocalDateShort(deadline)}</td>
       <td>
