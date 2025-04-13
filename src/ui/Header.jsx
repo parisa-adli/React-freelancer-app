@@ -25,7 +25,7 @@ function Header({ isShowSidebar, toggleSidebar }) {
             <RxCross2 className="h-8 w-8 text-primary-900" />
           )}
         </button>
-        <UserAvatar />
+
         <HeaderMenu />
       </div>
     </div>

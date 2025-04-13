@@ -1,20 +1,15 @@
-import { HiOutlineUser } from "react-icons/hi";
-import { Link } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
 import Logout from "../features/authentication/Logout";
+import UserAvatar from "../features/authentication/UserAvatar";
 
 function HeaderMenu() {
   return (
     <ul className="flex items-center gap-x-4">
-      <li className="flex">
-        <Link to="dashboard">
-          <HiOutlineUser className="h-5 w-5 text-primary-900" />
-        </Link>
-      </li>
+      <UserAvatar />
       <li className="flex">
         <DarkModeToggle />
       </li>
-      <li className="flex">
+      <li className="flex hover:text-rose-500">
         <Logout />
       </li>
     </ul>
