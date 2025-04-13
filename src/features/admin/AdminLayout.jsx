@@ -5,13 +5,14 @@ import { IoIosApps } from "react-icons/io";
 import { MdOutlinePostAdd } from "react-icons/md";
 import { GoHomeFill } from "react-icons/go";
 import { FaUser } from "react-icons/fa6";
+import { AiFillDashboard } from "react-icons/ai";
 
 function AdminLayout() {
   return (
     <AppLayout>
       <Sidebar>
         <CustomNavLink to="dashboard">
-          <GoHomeFill />
+          <AiFillDashboard />
           <span>داشبورد</span>
         </CustomNavLink>
 

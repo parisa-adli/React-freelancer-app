@@ -1,7 +1,5 @@
-import { NavLink } from "react-router-dom";
-import { IoIosApps } from "react-icons/io";
 import { GoHomeFill } from "react-icons/go";
-import useShowSidebar from "../hooks/useShowSidebar";
+import CustomNavLink from "./CustomNavLink";
 
 function Sidebar({ children, isShowSidebar }) {
   return (
@@ -11,6 +9,10 @@ function Sidebar({ children, isShowSidebar }) {
         `}
     >
       <ul className="flex flex-col gap-y-4">
+        <CustomNavLink to="/">
+          <GoHomeFill />
+          <span>خانه</span>
+        </CustomNavLink>
         {children}
         {/* <li>
           <CustomNavLink to="/owner/dashboard">

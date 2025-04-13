@@ -3,13 +3,14 @@ import AppLayout from "../../ui/AppLayout";
 import CustomNavLink from "../../ui/CustomNavLink";
 import Sidebar from "../../ui/Sidebar";
 import { IoIosApps } from "react-icons/io";
+import { AiFillDashboard } from "react-icons/ai";
 
 function OwnerLayout() {
   return (
     <AppLayout>
       <Sidebar>
         <CustomNavLink to="dashboard">
-          <GoHomeFill />
+          <AiFillDashboard />
           <span>داشبورد</span>
         </CustomNavLink>
 

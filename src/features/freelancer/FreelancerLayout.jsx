@@ -1,16 +1,16 @@
-import { GoHomeFill } from "react-icons/go";
 import AppLayout from "../../ui/AppLayout";
 import CustomNavLink from "../../ui/CustomNavLink";
 import Sidebar from "../../ui/Sidebar";
 import { IoIosApps } from "react-icons/io";
 import { MdOutlinePostAdd } from "react-icons/md";
+import { AiFillDashboard } from "react-icons/ai";
 
 function FreelancerLayout() {
   return (
     <AppLayout>
       <Sidebar>
         <CustomNavLink to="dashboard">
-          <GoHomeFill />
+          <AiFillDashboard />
           <span>داشبورد</span>
         </CustomNavLink>
 
