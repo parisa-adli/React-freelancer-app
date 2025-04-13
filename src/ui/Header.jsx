@@ -11,7 +11,7 @@ function Header({ isShowSidebar, toggleSidebar }) {
   return (
     <div className="bg-secondary-0 md:row-auto py-4 border-b border-secondary-200">
       <div
-        className={`container xl:max-w-screen-lg flex items-center justify-around md:justify-end gap-x-8 
+        className={`container xl:max-w-screen-lg flex items-center justify-between md:justify-end gap-x-8 
           ${isLoading ? "blur-sm opacity-50" : ""}
           `}
       >
