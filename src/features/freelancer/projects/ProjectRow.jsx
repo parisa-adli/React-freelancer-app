@@ -21,7 +21,6 @@ const projectStatus = {
 function ProjectRow({ project, index }) {
   const { title, budget, deadline, status } = project;
   const [open, setOpen] = useState(false);
-  console.log(project);
   return (
     <Table.Row>
       <td>{index + 1}</td>

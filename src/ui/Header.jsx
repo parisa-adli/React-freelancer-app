@@ -7,9 +7,9 @@ import { RxCross2 } from "react-icons/rx";
 
 function Header({ isShowSidebar, toggleSidebar }) {
   const { isLoading } = useUser();
-  
+
   return (
-    <div className="bg-secondary-0 md:row-auto py-4 md:px-8 border-b border-secondary-200">
+    <div className="bg-secondary-0 md:row-auto py-4 border-b border-secondary-200">
       <div
         className={`container xl:max-w-screen-lg flex items-center justify-around md:justify-end gap-x-8 
           ${isLoading ? "blur-sm opacity-50" : ""}
@@ -25,7 +25,6 @@ function Header({ isShowSidebar, toggleSidebar }) {
             <RxCross2 className="h-8 w-8 text-primary-900" />
           )}
         </button>
-
         <HeaderMenu />
       </div>
     </div>
