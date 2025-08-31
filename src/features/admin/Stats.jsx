@@ -7,7 +7,7 @@ function Stats({ users, projects, proposals }) {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <Stat
         color="primary"
-        title="درخواست ها"
+        title="کاربر ها"
         value={users}
         icon={<HiUser className="w-20 h-20" />}
       />
