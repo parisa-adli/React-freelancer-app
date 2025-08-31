@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://freelancer-app-backend-production.up.railway.app";
+const BASE_URL = "https://freelancer-app-backend-production.up.railway.app/api";
 
 const app = axios.create({
   baseURL: BASE_URL,
