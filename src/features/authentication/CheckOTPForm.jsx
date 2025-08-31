@@ -52,7 +52,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
         <HiArrowRight className="w-6 h-6 text-secondary-50" />
       </button>
       {otpResponse && (
-        <p className="flex justify-center items-center gap-x-2 my-4">
+        <p className="flex justify-center items-center gap-x-2 my-4 text-secondary-700">
           <span> {otpResponse?.message}</span>
           <button onClick={onBack}>
             <FiEdit className="w-6 h-6 text-primary-700" />
@@ -74,7 +74,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
           value={otp}
           onChange={setOtp}
           numInputs={6}
-          renderSeparator={<span>-</span>}
+          renderSeparator={<span className="text-secondary-900">-</span>}
           renderInput={(props) => <input type="number" {...props} />}
           containerStyle="flex flex-row-reverse gap-x-2 justify-center"
           inputStyle={{
