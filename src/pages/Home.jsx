@@ -17,7 +17,7 @@ function Home() {
             </p>
           </div>
           <div className="max-w-xl">
-            <img src="/freelancer.png" alt="freelancer-home" />
+            <img src="Images/freelancer.png" alt="freelancer-home" />
           </div>
         </div>
       </div>
