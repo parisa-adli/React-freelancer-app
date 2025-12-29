@@ -1,10 +1,6 @@
 import axios from "axios";
 
-<<<<<<< HEAD
 const BASE_URL = "https://freelancer-bc.runflare.run/api";
-=======
-const BASE_URL = "https://freelancer-bc.runflare.run/";
->>>>>>> 611a40f98c29f28594981b8f57af3892c6269f49
 
 const app = axios.create({
   baseURL: BASE_URL,
