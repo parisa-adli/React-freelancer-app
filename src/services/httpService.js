@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://freelancer-app-backend-production.up.railway.app/api";
+const BASE_URL = "http://localhost:5000/api";
 
 const app = axios.create({
   baseURL: BASE_URL,
@@ -25,7 +25,6 @@ app.interceptors.response.use(
         });
 
         if (data) return app(originalConfig);
-
       } catch (error) {
         return Promise.reject(error);
       }
