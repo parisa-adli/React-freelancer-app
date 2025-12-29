@@ -13,49 +13,49 @@ const categories = [
     id: 1,
     title: "برنامه نویسی",
     skills: 985,
-    image_url: "/public/Images/categories/development.svg",
+    image_url: "Images/categories/development.svg",
   },
   {
     id: 2,
     title: "طراحی و خلاقیت",
     skills: 515,
-    image_url: "/public/Images/categories/design.svg",
+    image_url: "Images/categories/design.svg",
   },
   {
     id: 3,
     title: "بازاریابی دیجیتال",
     skills: 486,
-    image_url: "/public/Images/categories/marketing.svg",
+    image_url: "Images/categories/marketing.svg",
   },
   {
     id: 4,
     title: "نویسندگی و ترجمه",
     skills: 1118,
-    image_url: "/public/Images/categories/writing.svg",
+    image_url: "Images/categories/writing.svg",
   },
   {
     id: 5,
     title: "موسیقی و ویدئو",
     skills: 567,
-    image_url: "/public/Images/categories/music.svg",
+    image_url: "Images/categories/music.svg",
   },
   {
     id: 6,
     title: "ویدئو و انیمیشن",
     skills: 231,
-    image_url: "/public/Images/categories/video.svg",
+    image_url: "Images/categories/video.svg",
   },
   {
     id: 7,
     title: "طراحی معماری",
     skills: 732,
-    image_url: "/public/Images/categories/Architecture.svg",
+    image_url: "Images/categories/Architecture.svg",
   },
   {
     id: 8,
     title: "مالی و حسابداری",
     skills: 963,
-    image_url: "/public/Images/categories/Finance.svg",
+    image_url: "Images/categories/Finance.svg",
   },
 ];
 const Achievement = [
@@ -63,25 +63,25 @@ const Achievement = [
     id: 1,
     title: "فریلنسرها",
     numbers: 7423,
-    image_url: "/public/Images/freelancer.svg",
+    image_url: "Images/freelancer.svg",
   },
   {
     id: 2,
     title: "پروژه های ثبت شده",
     numbers: 8325,
-    image_url: "/public/Images/projects.svg",
+    image_url: "Images/projects.svg",
   },
   {
     id: 3,
     title: "پروژه های تکمیل شده",
     numbers: 6274,
-    image_url: "/public/Images/completed.svg",
+    image_url: "Images/completed.svg",
   },
   {
     id: 4,
     title: "شرکت های ثبت شده",
     numbers: 3560,
-    image_url: "/public/Images/companies.svg",
+    image_url: "Images/companies.svg",
   },
 ];
 const BORDER_COLORS = {
@@ -187,7 +187,7 @@ function Home() {
           >
             <img
               className="h-full w-full object-contain"
-              src="/public/Images/find-job.png"
+              src="Images/find-job.png"
               alt=""
             />
           </div>
@@ -223,7 +223,7 @@ function Home() {
           >
             <img
               className="h-full w-full object-contain"
-              src="/public/Images/need-freelancer.png"
+              src="Images/need-freelancer.png"
               alt=""
             />
           </div>
